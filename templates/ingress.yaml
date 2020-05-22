@@ -16,7 +16,7 @@ spec:
   - host: {{ .Values.service.http.externalHost }}
     http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: {{ template "fullname" . }}-http
           servicePort: {{ .Values.service.http.port }}
